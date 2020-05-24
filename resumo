@@ -1,0 +1,104 @@
+Instalar o cypress
+```
+npm install cypress --save-dev
+```
+
+Abrir o cypress no node_modules
+```
+node_modules/.bin/cypress open
+```
+
+Cria na pasta integration > examples o arquivo: sample.spec.js e no terminal 
+do cypress seleciona a pasta criada. Ele abre o navegador para execucao do teste
+
+O termo abaixo impede que o grupo ou linha seja executado
+```
+Termo: .skip
+Termo 2: Only (aceita somente um, se arrumar mais ele considera o ultimo)
+Exemplo:
+describe.skip('Should group tests...', () => {
+  describe('Sloud group more specific tests...', () => {
+    it.skip("A specific test...", () => {
+
+    })
+  })
+  Exemplo 2:
+describe.only('Should group tests...', () => {
+  describe('Sloud group more specific tests...', () => {
+    it.skip("A specific test...", () => {
+
+    })
+  })
+```
+
+Usa-se quando se tem o nome completo do que deseja buscar
+```
+'have.text'
+```
+
+Usa-se quando se tem parte do nome do que deseja buscar
+```
+'contain'
+```
+
+No css o ponto antes da palavra (.teste), simboliza a classe
+
+A # antes da palavra significa busca por Id.
+
+Recarrega a pagina
+```
+cy.reload()
+```
+
+Comando que permite executar antes de todos
+```
+before(() => {
+  })
+  ```
+  Comando que permite executar antes de cada um dos testes
+```
+beforeEach(() => {
+  })
+  ```
+
+Comando para permitir inserir valor
+```
+type('Aprendendo Cypress')
+```
+Comando para retardar o tempo de execucao
+```
+{delay:100})
+```
+
+Comando de cofiguracao geral podem ser arrumados no arquivo "cypress.json" > exemplo de informacao "defaultCommandTimeout": 1000
+
+Should vs Then
+```
+Should: o comando foi executado e ele ja ficou fazendo a verificacao (imprimiu diversas vezes)
+e ignora o return
+Then (entao): aguardou o comando ser finalizado para ser executado ( imprimiu uma vez)
+(novas consultas é aconselhado o then) 
+
+Comando usado quando for textField
+```
+'have.value'
+```
+Aponta para a propria propriedade
+```
+'have.prop'
+```
+
+Comando usado com for tipo texto
+```
+contain
+```
+Quando for fazer referencia a algo para buscar deve-se usar um caracter especial
+senao ele busca tipo body, pt, br... dai arruma um @ por exemplo
+antes da palavra (@winOper)
+
+Configuracao da busca de campos (arruma na pasta: support > index.js)
+```
+Cypress.SelectorPlayground.defaults({
+  selectorPriority: ['id', 'class', 'attributes', 'data-cy', 'data-test', 'data-testid', 'tag', 'nth-child']
+})
+```
