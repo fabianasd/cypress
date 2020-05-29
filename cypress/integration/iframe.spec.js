@@ -1,4 +1,4 @@
-/// <references types="cypress"/>
+/// <reference types="cypress"/>
 
 describe('Work with iFrames', () => {
     it('Deve preencher campo de texto', () => {

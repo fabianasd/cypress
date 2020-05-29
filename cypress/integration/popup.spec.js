@@ -1,4 +1,4 @@
-/// <references types="cypress"/>
+/// <reference types="cypress"/>
 
 describe('Work with Popup', () => {
   it('Deve testar popup diretamente', () => {

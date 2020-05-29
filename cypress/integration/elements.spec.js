@@ -1,4 +1,4 @@
-/// <references types="cypress"/>
+/// <reference types="cypress"/>
 
 describe('Work with basic elements', () => {
  //executa uma vez antes de todos

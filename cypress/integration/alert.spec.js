@@ -1,4 +1,4 @@
-/// <references types="cypress"/>
+/// <reference types="cypress"/>
 
 describe('Work with alerts', () => {
   //executa uma vez antes de todos

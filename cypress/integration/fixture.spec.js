@@ -1,4 +1,4 @@
-/// <references types="cypress"/>
+/// <reference types="cypress"/>
 
 describe('Fixtures tests', () => {
   it('Get data form fixture file', function () {

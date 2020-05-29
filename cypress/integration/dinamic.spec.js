@@ -1,11 +1,11 @@
-/// <references types="cypress"/>
+/// <reference types="cypress"/>
 
 describe('Work with alerts', () => {
   //executa uma vez antes de todos
    beforeEach(() => {
      cy.visit('http://www.wcaquino.me/cypress/componentes.html')
    })
-//testa todas as opcoes marcando um de cada vez e salvando ( foram 4 testes exucutados)
+//testa todas as opcoes marcando um de cada vez e salvando ( foram 4 testes executados)
   const foods = ['carne', 'frango', 'pizza', 'vegetariano']
 foods.forEach(food => {
   it(`Cadastro com comida variada ${food}`, function () {

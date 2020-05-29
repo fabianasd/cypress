@@ -1,4 +1,4 @@
-/// <references types="cypress"/>
+/// <reference types="cypress"/>
 require('cypress-xpath')
 describe('Work with basic elements', () => {
    before(() => {
@@ -17,10 +17,10 @@ describe('Work with basic elements', () => {
 })
 
 //usa-se xpath quando nao temos outras opcoes de busca (ID por exemplo)
-// it.only('using xpath', () => {
-//     cy.xpath("//input[contains(@onclick, 'Francisco')]")
+ it.only('using xpath', () => {
+     cy.xpath("//input[contains(@onclick, 'Francisco')]")
    
-//     cy.xpath("//table[@id='tabelaUsuarios']//td[contains(., 'Francisco')]/..//input[@type='text']")
-//     cy.xpath("//td[contains(., 'Usuario A')]/following-sibling::td[contains(., 'Mestrado')]/..//input[@type='text']").type('funciona')
-//   })
+     cy.xpath("//table[@id='tabelaUsuarios']//td[contains(., 'Francisco')]/..//input[@type='text']")
+     cy.xpath("//td[contains(., 'Usuario A')]/following-sibling::td[contains(., 'Mestrado')]/..//input[@type='text']").type('funciona')
+   })
 })
