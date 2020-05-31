@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon index.js",
-    "cypress open": "cypress open"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+
   },
   "dependencies": {
     "express": "^4.17.1"

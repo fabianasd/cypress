@@ -56,5 +56,32 @@ Aponta para a própria propriedade
 'have.prop'
 ```
 
+Execução via comando
+```
+no arquivo package.json > "cypress:run": "cypress run"
+no terminal:npm run cypress:run
+```
+Se tiver bugs (além de ser possível verificar no arquivo de vídeos)
+```
+no terminal: npm run cypress:run -- --spec caminhoDoArquivocomErro (cypress/integration/time.spec.js)
+```
+Para visualizar a execução do teste
+```
+npm run cypress:run -- --spec cypress/integration/time.spec.js --headed --no-exit
+```
+
+Visualizar no chrome
+```
+node_modules/.bin/cypress open
+npm run cypress:run -- --spec cypress/integration/time.spec.js --browser chrome
+```
+Se houver erro da execução do npm
+```
+./node_modules/.bin/cypress run --spec cypress/integration/time.spec.js --browser chrome
+```
+Executar apenas a pasta "Barriga"
+```
+./node_modules/.bin/cypress run --spec cypress/integration/barriga/**/*
+
 
 

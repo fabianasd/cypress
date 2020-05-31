@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 
-describe('Work with alerts', () => {
+describe('Work with time', () => {
   //executa uma vez antes de todos
    before(() => {
      cy.visit('http://www.wcaquino.me/cypress/componentes.html')
@@ -23,7 +23,7 @@ it('Going back to the past', () => {
 
 it.only('Goes to the future', () => {
   cy.get('#buttonTimePassed').click()
-  cy.get('#resultado > span').should('contain', '15902')
+  cy.get('#resultado > span').should('contain', '15909')
   //maior ou igual => gt
   //cy.get('#resultado > span').invoke('text').then(parseFloat).should('be.gt', 1590279702885)
 
